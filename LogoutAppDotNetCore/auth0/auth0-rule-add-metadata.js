@@ -69,7 +69,7 @@ async function rule(user, context, callback) {
       };
       var _ = require('lodash');
   
-      if (context.clientID === "IC7FiwfHyBYfKAgNLKjxDhBSDRXlrLd2" && context.sso.current_clients && context.sso.current_clients.length > 0) {
+      if (context.clientID === "<client_id_of_logout_app>" && context.sso.current_clients && context.sso.current_clients.length > 0) {
   
           var clientsData = await getClientsData(true);
           var foundAll = true;
