@@ -1,6 +1,6 @@
 # Logout App Dot Net Core
 
-##  Solution folde has the code for the app
+##  Solution folder has the code for the app
 
 ## auth0 folder has the rule that adds the session clients into the token with all metadata
 
