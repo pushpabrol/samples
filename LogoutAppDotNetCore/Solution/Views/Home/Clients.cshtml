@@ -1,0 +1,35 @@
+﻿@{
+}
+
+
+<div class="container">
+
+    <h2 class="text-center">List of clients with client metdata for local logout:</h2>
+
+
+    <ul class="fa-ul list-group">
+
+        @foreach (var client in (IEnumerable<Auth0.ManagementApi.Models.Client>)ViewBag.clientsFiltered)
+        {
+            <li class="list-group-item">
+                <span class="fa-li"><i id="@client.ClientId" class="fa-solid fa-check"></i></span>
+                <div class="container">
+                    <div class="row">
+                        <div class="col"><b>Client Id:</b> <span>@client.ClientId</span></div>
+                        <div class="col"><b>Client Name:</b> <span>@client.Name</span></div>
+                        <div class="col"><b>Logout Url:</b> <span>@client.ClientMetaData["logout_url"]</span></div>
+                        <div class="col"><b>App Type:</b><span>@client.ClientMetaData["appType"]</span></div>
+
+                    </div>
+                </div>
+
+            </li>
+
+        }
+
+
+    </ul>
+</div>
+       
+
+
